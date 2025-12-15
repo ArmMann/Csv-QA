@@ -162,6 +162,10 @@ def execute_code(
             exec(code, exec_globals, exec_locals)
             result = None
 
+        # Validate result - detect incomplete code (bound methods, callables)
+        if callable(result) and not isinstance(result, type):
+            return None, f"Incomplete code: result is a callable ({type(result).__name__}), not data"
+
         return result, None
 
     except Exception as e:
@@ -175,6 +179,10 @@ def format_result(result: Any, max_rows: int = 20) -> str:
     """
     if result is None:
         return "No result"
+
+    # Safety check for callables (shouldn't reach here, but just in case)
+    if callable(result) and not isinstance(result, type):
+        return f"Error: Invalid result type ({type(result).__name__})"
 
     if isinstance(result, pd.DataFrame):
         if len(result) > max_rows:

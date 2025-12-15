@@ -1,5 +1,7 @@
 # CSV RAG Pipeline - Solution Documentation
 
+pipeline_best.log contains the best results with llama17b and oss120b.
+
 A RAG-style question-answering system for querying tabular business data using natural language.
 
 ## Quick Start
@@ -113,10 +115,11 @@ python run_tests.py --log
 
 ## Test Results
 
-The results can be tracked with pipeline logs from test runs with different model combinations. Each log contains full execution traces: prompts, generated code, execution results, and final answers. **pipeline_oss120_oss120.log** seems to contain the best results , tho all pass the pipeline on average 14/15.
+The results can be tracked with pipeline logs from test runs with different model combinations. Each log contains full execution traces: prompts, generated code, execution results, and final answers. **pipeline_best.log** contains the best results.
 
 | Log File                        | Stage 1 (Code Gen) | Stage 2 (Answer Gen)                       |
 | ------------------------------- | ------------------ | ------------------------------------------ |
+| `pipeline_best.log`           | gpt-oss-120b       | llama-4-maverick-17b                       |
 | `pipeline_llama70_llama8.log` | llama-3.3-70b      | llama-3.1-8b                               |
 | `pipeline_oss120_qwen3.log()` | gpt-oss-120b       | qwen3-32b(answer contains thinking traces) |
 | `pipeline_oss120_oss20.log`   | gpt-oss-120b       | gpt-oss-20b                                |

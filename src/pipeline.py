@@ -28,11 +28,6 @@ class PipelineResult:
 class RAGPipeline:
     """
     RAG-style pipeline for answering questions about tabular data.
-
-    Pipeline stages:
-    1. NL-to-Pandas code generation 
-    2. Code validation and execution
-    3. Result-to-NL answer generation 
     """
 
     def __init__(

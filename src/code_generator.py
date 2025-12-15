@@ -122,7 +122,7 @@ def generate_pandas_code(
             {"role": "user", "content": prompt}
         ],
         temperature=0.0,
-        max_tokens=1000
+        max_tokens=1500
     )
 
     code = response.choices[0].message.content.strip()
@@ -202,7 +202,7 @@ def generate_code_with_error_feedback(
             {"role": "user", "content": prompt}
         ],
         temperature=0.0,
-        max_tokens=1000
+        max_tokens=1500
     )
 
     code = response.choices[0].message.content.strip()
