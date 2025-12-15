@@ -121,7 +121,7 @@ The results can be tracked with pipeline logs from test runs with different mode
 | ------------------------------- | ------------------ | ------------------------------------------ |
 | `pipeline_best.log`           | gpt-oss-120b       | llama-4-maverick-17b                       |
 | `pipeline_llama70_llama8.log` | llama-3.3-70b      | llama-3.1-8b                               |
-| `pipeline_oss120_qwen3.log()` | gpt-oss-120b       | qwen3-32b(answer contains thinking traces) |
+| `pipeline_oss120_qwen3.log`   | gpt-oss-120b       | qwen3-32b(answer contains thinking traces) |
 | `pipeline_oss120_oss20.log`   | gpt-oss-120b       | gpt-oss-20b                                |
 | `pipeline_oss120_oss120.log`  | gpt-oss-120b       | gpt-oss-120b                               |
 | `pipeline_oss20_llama12.log`  | gpt-oss-20b        | llama-3.2-12b                              |
